@@ -1,8 +1,8 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: Helvetics, sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-    color: lightgrey;
+    font-family: Helvetics, sans-serif, Calibri, 'Trebuchet MS', sans-serif ;
+    color: rgb(123, 168, 235);
 }
 .container{
     position: relative;
@@ -20,6 +20,58 @@ body{
     z-index: -1;
     mix-blend-mode: overlay;
 }
+header{
+    display : flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right : 0;
+    align-items: center;
+    justify-content: space-between;
+    height : 70px; 
+    background-color: rgba(255, 255, 255, 0.123);
+    background-filter: blur(10px);
+    padding: 0 30px;
+    box-shadow:0 0 15px #72a1de8d;
+    z-index: 999;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+.left img{
+    width:40px;
+    margin : 0 15px;
+}
+
+header ul{
+    display:flex; 
+    justify-content: space-between;
+    width: 30%;
+    padding: 15px 15px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 69, 0.30);
+    background-filter: blur(10px);
+    box-shadow:0 0 10px #727fde65;
+}
+header ul li{
+    list-style: none;
+}
+header ul a{
+    texct-decoration: none;
+    color: lightgrey;
+    font-weight: 700;
+    margin: 0 10px;
+
+}
+
+
+
+
+
+
+
 @media(max-aspect-ratio: 16/9){
     .back-vid{
         width: auto;
