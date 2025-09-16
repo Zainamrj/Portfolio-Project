@@ -89,7 +89,7 @@ header ul a{
     color: black;
     box-shadow: 0 0 15px #727fde6f;
 }
-.backdrop{
+/*.backdrop{
     position:absolute;
     top: 0;
     width: 100%;
@@ -101,7 +101,7 @@ header ul a{
 .backdrop-box video{
     width: 75%;
     margin-top: -23.5%;
-}
+}*/
 .intro{
     position: relative;
     display: flex;
