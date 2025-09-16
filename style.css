@@ -1,8 +1,8 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: Helvetics, sans-serif, Calibri, 'Trebuchet MS', sans-serif ;
-    color: rgb(123, 168, 235);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:#ebbeff;
 }
 .container{
     position: relative;
@@ -12,13 +12,15 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 100px;
+    background-color: #001f7c38
 }
 .back-vid{
     position: fixed;
+    top: 0;
     right: 0;
     bottom: 0;
-    z-index: -1;
-    mix-blend-mode: overlay;
+    z-index: -1
+    mix-blend-mode: lighten;
 }
 header{
     display : flex;
@@ -41,7 +43,7 @@ header{
     align-items: center;
 }
 .left img{
-    width:40px;
+    width:50px;
     margin : 0 15px;
 }
 
@@ -65,8 +67,184 @@ header ul a{
     margin: 0 10px;
 
 }
+.box-icons{
+    display: flex;
+    gap: 10px;
+}
+
+.box-icons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #727fde;
+    text-decoration: none;
+    color: lightgrey;
+    border-radius: 50%;
+}
+.box-icons a:hover{
+    background-color: #727fde;
+    color: black;
+    box-shadow: 0 0 15px #727fde6f;
+}
+.backdrop{
+    position:absolute;
+    top: 0;
+    width: 100%;
+    justify-content: center;
+    mix-blend-mode: lighten;
+
+}
+
+.backdrop-box video{
+    width: 75%;
+    margin-top: -23.5%;
+}
+.intro{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.intro-info{
+    position: absolute;
+    left: 5%;
+}
+.intro-info .intro-info-title{
+    color: #e297f5;
+    padding: 10px 5px;
+    border: 5px solid #692263;
+    width: 270px;
+    background-color: #727fde1a;
+    box-shadow: 0 0 10px #727fde6f;
+    border-radius: 50px;
+}
+.intro-info h1{
+    font-size:60px;
+    max-width:500px;
+    font-weight: 700;
+    line-height: 70px;
+    margin-top:40px;
+    margin-bottom: 30px;
+
+}
+.intro-info p{
+    max-width: 550px;
+    line-height:25px;
+    margin-bottom:40px;
+    font-size:20px;
+
+}
+
+.intro-info button{
+    color:rgb(195, 121, 224);
+    padding:10px 20px;
+    border-radius: 5px;
+    border: 3px solid #692263;
+    background-color: transparent;
+    box-shadow: 0 0 5px #727fde6f;
+    cursor: pointer;
+    trasition:0.3s;
+    font-weight: 200;
+}
+
+.intro-info button.hover{
+    box-shadow: 0 0 10px #7c85bb;
+    
+}
+/* Gradient Animation */
+.gradient{
+    background: linear-gradient(to right , #aa93eb, #527cd6, #c482be, #997ce7, #4d7adb, #aa93eb);
+    background-size: 200% ;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+
+}
+
+@keyframes animate-gradient{
+    to{
+        background-position: 200%;
+    }
+
+}  
+
+.intro-vid-box{
+    position: absolute;
+    right: 3%;
+}
+
+.intro-vid-box video{
+    height:900px;
+}
+
+.scroll-down{
+    height:40px;
+    width: 30px;
+    border: 2px solid lightgray;
+    position:absolute;
+    left: 49%;
+    bottom: 8%;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow:0 0 15px rgba(211,211,211,0.477);
 
 
+}
+
+.scroll-down::before,
+.scroll-down::after{
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    border: 2px solid lightgray;
+    transform: translate(-50%) rotate(45deg);
+    border-top:transparent;
+    border-left: transparent;
+    animation: scroll-down 2s ease-in-out infinite;
+
+
+}
+
+
+.scroll-down::before {
+    top: 15%;
+    animation-delay: 0.3s;
+
+}
+
+
+
+@keyframes scroll-down{
+    0% {
+        opacity: 0;
+        
+    }
+    30%, 60%{
+        opacity: 1;
+    }
+    100%{
+        top: 90%;
+        opacity: 0;
+        
+        
+    }
+}
+
+
+
+ 
+    
 
 
 
