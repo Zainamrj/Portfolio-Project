@@ -43,14 +43,14 @@ header{
     align-items: center;
 }
 .left img{
-    width:50px;
+    width:40px;
     margin : 0 15px;
 }
 
 header ul{
     display:flex; 
     justify-content: space-between;
-    width: 30%;
+    width: 35%;
     padding: 15px 15px;
     border-radius: 15px;
     background-color: rgba(0, 0, 69, 0.30);
